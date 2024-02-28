@@ -1,0 +1,132 @@
+서식 문자열 이용 stdio.h와 입출력 하기.
+
+#include <stdio.h>
+
+int main()
+{
+    char name[] = "김종현";
+    int age = 31;
+    char score = 'A';
+
+    printf("이름: %s\n\n나이: %d\n\n성적: %c", name, age, score);
+
+    return 0;
+}
+
+----
+사용자로부터 1개의 정수를 입력 받아서 입력 받은 수에 5를 곱한 결과를 출력하라.
+#include<stdio.h>
+
+int main() {
+    int input = 0;
+    printf("정수를 입력하세요:  ");
+    scanf_s("%d", &input);
+    printf("%d"\n, input*5);
+
+    return 0;
+}
+----
+사용자로부터 두 개의 정수를 입력 받는다. 입력한 두 정수를 그대로 출력하는 프로그램을 작성하라. 
+#include <stdio.h>
+
+int main()
+{
+    int num1;
+    int num2;
+   
+    printf("정수 2개를 입력하세요: ");
+    scanf_s("%d %d", &num1, &num2);
+   
+    printf("%d, %d", num1, num2);
+   
+    return 0;
+}
+----
+사용자로부터 알파벳 문자 하나를 입력 받는다. 그리고 이에 해당하는 숫자를 출력하라. 예를 들어 ‘A’를 입력하면 출력 결과는 65가 되어야 한다. (참고, 문자 입력 시 서식은 %c를 사용하면 된다.)	
+
+#include<stdio.h>
+
+int main() {
+    char a;
+
+    printf_s("알파벳 하나를 입력해주세요.");
+    scanf_s("%c", &a);
+    printf_s("%d", a);
+
+    return 0;
+};
+
+----
+사용자로부터 두 개의 정수를 입력 받아 사칙 연산의 결과를 출력해보자. 사용자 입력을 각각 4와 2를 입력하였을 때, 출력 결과의 형태는 다음과 같다.
+
+#include<stdio.h>
+
+int main() {   
+    int input1 = 0;
+    int input2 = 0;
+
+    printf("정수 2개를 입력해 주세요 EX) 10 4\n");
+    scanf_s("%d%d", &input1, &input2);
+
+    printf("두 수의 합: %d\n", input1 + input2);
+    printf("두 수의 차: %d\n", input1 - input2);
+    printf("두 수의 곱: %d\n", input1 * input2);
+    printf("두 수의 나누기: %d\n", input1 / input2);
+
+    return 0;
+};
+---
+사용자로부터 3개의 정수를 입력 받아서, 3개의 수를 곱한 결과를 출력하라.
+
+출력 예)
+세 개의 정수를 입력하세요 : 2 3 4
+세 수의 곱은 24입니다.
+
+#include<stdio.h>
+
+int main() {
+    int num1, num2, num3;
+
+    printf_s("세 개의 정수를 입력하세요.");
+    scanf_s("%d%d%d", &num1, &num2, &num3);
+
+    printf("세 수의 곱은 %d입니다", num1 * num2 * num3);
+
+    return 0;
+};
+
+----
+사용자로부터 세 개의 정수를 입력 받아서 차례로 곱하기, 더하기 연산을 순서대로 수행하여 그 결과를 출력해보자. 출력 결과의 형태는 다음과 같다. 
+
+#include<stdio.h>
+
+int main(){ 
+
+int num1, num2, num3 = 0;
+    printf("세 개의 정수를 입력: ");
+    scanf_s("%d%d%d", &num1, &num2, &num3);
+    printf("출력: %d + %d * %d = %d\n", num1, num2, num3, num1 + (num2 * num3));
+   
+   return 0;
+}
+
+----
+
+사용자로부터 3 개의 정수를 입력 받는다. 입력한 세 정수의 합과 평균을 출력하는 프로그램을 작성하라. 
+
+#include<stdio.h>
+
+int main() {   
+ int num1, num2, num3= 0;
+   
+    printf_s("평균을 구할 정수를 3개 입력 하세요.");
+    scanf_s("%d%d%d", &num1, &num2, &num3);
+
+    float sum = num1 + num2 + num3;
+
+    printf_s("합계 : %d\n", num1 + num2 + num3);
+    printf_s("평균 : %f\n", sum / 3);
+
+    return 0;
+};
+
